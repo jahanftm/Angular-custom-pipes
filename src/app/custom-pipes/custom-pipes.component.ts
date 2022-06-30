@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-custom-pipes',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomPipesComponent implements OnInit {
 
-  constructor() { }
+  text: string = '';
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

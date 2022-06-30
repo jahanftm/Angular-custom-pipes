@@ -4,3 +4,16 @@
 <p>
   You can create a custom pipe by using the <code>ng generate pipe</code> command in your Angular CLI
 </p>
+
+<p>I will create a custom shortener pipe.  the custom ShortenerPipe can be used
+  to shorten a string before displaying it in the template.</p>
+
+<div>
+  <label for="text">add your text </label>
+  <input id="text" type="text" [(ngModel)]="text">
+</div>
+
+<div style="font-weight: bold">
+  <label >the result: {{text | shortener}}</label>
+</div>
+
