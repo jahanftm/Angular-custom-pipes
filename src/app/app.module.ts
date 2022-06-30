@@ -3,10 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
+import {ShortenerPipe} from "./custom-pipes/shortener-pipe";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomPipesComponent,
+    ShortenerPipe
   ],
   imports: [
     BrowserModule,
