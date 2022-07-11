@@ -4,16 +4,16 @@ import {Pipe, PipeTransform} from "@angular/core";
   name: 'shortener'
 })
 export class ShortenerPipe implements PipeTransform {
-  transform(value: any): any {
+  transform(value: any, start: number, end: number): any {
     if(!value) {
       return '';
     }
 
     const val = value.toString();
     if(val.length > 10) {
-      const first = val.slice(0,4);
-      const end = val.slice(val.length -4 , val.length)
-      return first + '...' + end;
+      const _first = val.slice(start, end);
+      const _end = val.slice(val.length - end , val.length)
+      return _first + '...' + _end;
     }
 
     return value;
