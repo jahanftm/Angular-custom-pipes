@@ -14,4 +14,5 @@ export class CustomPipesComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 }

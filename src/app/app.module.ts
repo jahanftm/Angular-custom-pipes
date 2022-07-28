@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
 import {ShortenerPipe} from "./custom-pipes/shortener-pipe";
 import {FormsModule} from "@angular/forms";
+import { UppercasePipe } from './custom-pipes/uppercase.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomPipesComponent,
-    ShortenerPipe
+    ShortenerPipe,
+    UppercasePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+  ],
+  exports: [
+    ShortenerPipe,
+    UppercasePipe
   ],
   providers: [],
   bootstrap: [AppComponent]
