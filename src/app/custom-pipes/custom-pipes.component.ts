@@ -9,10 +9,13 @@ export class CustomPipesComponent implements OnInit {
 
   text: string = '';
 
+  timestamp: number =0;
+
   constructor() {
   }
 
   ngOnInit(): void {
+    this.timestamp = + new Date();
   }
 
 }

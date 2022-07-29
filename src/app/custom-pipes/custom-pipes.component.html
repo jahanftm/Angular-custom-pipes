@@ -30,3 +30,15 @@
 <div style="font-weight: bold">
   <label >the result: {{text | uppercase}}</label>
 </div>
+
+<br>
+<br>
+<br>
+<br>
+<p>
+  I have created a custom persianDate pipe. the custom persianDatePipe can be used to format timestamp to persian date time.
+</p>
+<p>{{timestamp}}</p>
+<div style="font-weight: bold">
+  <label >the result: {{timestamp | persianDate: 'DAY_HOUR_FORMAT'}}</label>
+</div>

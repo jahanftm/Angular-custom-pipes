@@ -7,13 +7,15 @@ import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
 import {ShortenerPipe} from "./custom-pipes/shortener-pipe";
 import {FormsModule} from "@angular/forms";
 import { UppercasePipe } from './custom-pipes/uppercase.pipe';
+import { PersianDatePipe } from './custom-pipes/persian-date.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     CustomPipesComponent,
     ShortenerPipe,
-    UppercasePipe
+    UppercasePipe,
+    PersianDatePipe
   ],
   imports: [
     BrowserModule,
