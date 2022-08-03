@@ -16,7 +16,7 @@
 </div>
 
 <div style="font-weight: bold">
-  <label >the result: {{text | shortener : 0: 4}}</label>
+  <label>the result: {{text | shortener : 0: 4}}</label>
 </div>
 
 <br>
@@ -25,10 +25,11 @@
 <br>
 <br>
 <p>
-  I have created a custom uppercase pipe. the custom UppercasePipe can be used to upper case a string before displaying it.
+  I have created a custom uppercase pipe. the custom UppercasePipe can be used to upper case a string before displaying
+  it.
 </p>
 <div style="font-weight: bold">
-  <label >the result: {{text | uppercase}}</label>
+  <label>the result: {{text | uppercase}}</label>
 </div>
 
 <br>
@@ -36,9 +37,28 @@
 <br>
 <br>
 <p>
-  I have created a custom persianDate pipe. the custom persianDatePipe can be used to format timestamp to persian date time.
+  I have created a custom persianDate pipe. the custom persianDatePipe can be used to format timestamp to persian date
+  time.
 </p>
 <p>{{timestamp}}</p>
 <div style="font-weight: bold">
-  <label >the result: {{timestamp | persianDate: 'DAY_HOUR_FORMAT'}}</label>
+  <label>the result: {{timestamp | persianDate: 'DAY_HOUR_FORMAT'}}</label>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<p>
+<p>
+  The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. When a new value is emitted, the async pipe marks the component to be checked for changes. When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks. When the reference of the expression changes, the async pipe automatically unsubscribes from the old Observable or Promise and subscribes to the new one.
+</p>
+
+<div *ngIf="users$ | async as users">
+
+  <div class="users" *ngFor="let i of users">
+    <div>{{i.id}}</div>
+    <div>{{i.name}}</div>
+    <div>{{i.createdAt}}</div>
+  </div>
 </div>
